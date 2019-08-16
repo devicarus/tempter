@@ -1,0 +1,9 @@
+{
+  "name": "tempter",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^6.5.1"
+  }
+}
