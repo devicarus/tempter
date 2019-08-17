@@ -5,7 +5,7 @@ const path = require('path')
 const replacer = require('./utility/replacer')
 
 module.exports = (templatesDir) => {
-    const templatesArr = fs.readdirSync(path.join(__dirname, templatesDir))
+    const templatesArr = fs.readdirSync(templatesDir)
 
     inquirer
 	.prompt([{
@@ -19,8 +19,8 @@ module.exports = (templatesDir) => {
 		message: 'How would you like to name it?'
 	}])
 	.then(answers => {
-        const templateDir = path.join(__dirname, templatesDir, answers.template)
-        const templateConfig = require(path.join(templateDir, 'template.json'))
+		const templateDir = path.join(templatesDir, answers.template)
+		const templateConfig = require(path.resolve(templateDir, 'template.json'))
         const templateFiles = fs.readdirSync(templateDir)
 
         templateFiles.map(filename => {
@@ -29,11 +29,11 @@ module.exports = (templatesDir) => {
 
 				switch (templateConfig.type) {
 					case 'subfolder':
-						templateTarget = path.join(__dirname, templateConfig.dir, answers.name)
+						templateTarget = path.join(templateConfig.dir, answers.name)
 						break;
 	
 					case 'spread':
-						templateTarget = path.join(__dirname, templateConfig.dir)
+						templateTarget = path.join(templateConfig.dir)
 						break;
 				
 					default:
