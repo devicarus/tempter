@@ -1,0 +1,32 @@
+{
+  "name": "tempter",
+  "version": "1.0.0",
+  "description": "Your own sub-generator. In minutes. Bundled with your project.",
+  "keywords": [
+    "generator",
+    "component",
+    "template",
+    "replace",
+    "boilerplate",
+    "generate",
+    "templating",
+    "components",
+    "react",
+    "dev",
+    "tool"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DEVICARUS/tempter.git"
+  },
+  "author": {
+    "name": "DEVICARUS",
+    "email": "me@devicarus.eu",
+    "url": "https://devicarus.eu/"
+  },
+  "license": "ISC",
+  "main": "main.js",
+  "dependencies": {
+    "inquirer": "^6.5.1"
+  }
+}
