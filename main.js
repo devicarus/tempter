@@ -28,11 +28,11 @@ module.exports = (templatesDir) => {
 				const template = fs.readFileSync(path.join(templateDir, filename), 'utf-8')
 
 				switch (templateConfig.type) {
-					case 'folder':
+					case 'subfolder':
 						templateTarget = path.join(__dirname, templateConfig.dir, answers.name)
 						break;
 	
-					case 'file':
+					case 'spread':
 						templateTarget = path.join(__dirname, templateConfig.dir)
 						break;
 				
